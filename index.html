@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adonia DOSSO | Full Stack & Data</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans bg-gray-50 text-dark antialiased">
+  <!-- Navigation Avancée -->
+  <nav class="fixed w-full bg-white/90 backdrop-blur-md z-40 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex justify-between items-center h-16">
+        <a href="#" class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">AD</a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#accueil" class="nav-link hover:text-primary transition-colors">Accueil</a>
+          <a href="#projets" class="nav-link hover:text-primary transition-colors">Projets</a>
+          <a href="#expertise" class="nav-link hover:text-primary transition-colors">Expertise</a>
+          <a href="#" id="cv" class="px-4 py-2 bg-gradient-to-r from-secondary to-white rounded-lg hover:bg-primary/90 transition-colors">Show CV</a>
+          <a href="#contact" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">Contact</a>
+        </div>
+        
+        <button class="md:hidden focus:outline-none" id="menu-toggle">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Menu Mobile -->
+    <div class="md:hidden hidden bg-white w-full absolute left-0 px-6 pb-4 shadow-lg" id="mobile-menu">
+      <div class="flex flex-col space-y-4 pt-2">
+        <a href="#accueil" class="nav-link-mobile hover:text-primary">Accueil</a>
+        <a href="#projets" class="nav-link-mobile hover:text-primary">Projets</a>
+        <a href="#expertise" class="nav-link-mobile hover:text-primary">Expertise</a>
+          <a href="#" id="cv" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">CV</a>
+          <a href="#contact" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 text-center">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section Animée -->
+  <section id="accueil" class="min-h-screen flex items-center pt-16">
+    <div class="max-w-7xl mx-auto px-6 py-20">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-fade-in">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Adonia DOSSO</span><br>
+            <span class="text-gray-600">Full Stack & Data Analyste</span>
+          </h1>
+          <p class="text-lg text-gray-600 mb-8 max-w-lg">
+            Je transforme des problèmes complexes en solutions élégantes grâce à des applications web performantes et des analyses data actionnables.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#projets" class="px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl">
+              Voir mes projets
+            </a>
+            <a id="cv_accueil" href="#CV" class="px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl">
+              Voir mon CV
+            </a>
+            <a href="#contact" class="px-8 py-3 border border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors">
+              Discutons
+            </a>
+          </div>
+        </div>
+        
+        <div class="relative hidden md:block animate-float">
+          <div class="absolute -top-10 -left-10 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+          <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-emerald-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                 alt="Adonia DOSSO" 
+                 class="rounded-2xl shadow-2xl border-8 border-white object-cover w-full h-96">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Projets Premium -->
+  <section id="projets" class="py-20 bg-gray-100/50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-sm font-semibold tracking-wider text-primary uppercase">Réalisations</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2">Projets Récents</h2>
+      <p class="max-w-2xl mx-auto text-gray-600 mt-4">Des solutions techniques répondant à des besoins métiers concrets</p>
+    </div>
+
+    <!-- Projet 1 - Analyse de Relevés Bancaires -->
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+      <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg">
+        <div class="relative h-80 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1511&q=80" 
+               alt="Analyse bancaire" 
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute bottom-4 left-4 flex flex-wrap gap-2">
+            <span class="bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-medium">Python</span>
+            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">Golang</span>
+            <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-2xl font-bold mb-3">Analyse de Relevés Bancaires</h3>
+          <p class="text-gray-600 mb-4">
+            Application web d’automatisation des relevés bancaires, permettant l’extraction de transactions PDF et leur classification en tableaux Excel exploitables.
+          </p>
+          <ul class="text-sm text-gray-600 list-disc list-inside mb-4">
+            <li>Extraction intelligente via Python (PDFMiner, Pandas)</li>
+            <li>API backend Go (Gin), export Excel</li>
+            <li>Interface frontend simple avec JS & Chart.js</li>
+            <li>Utilisable hors ligne ou en local</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="bg-gray-400 text-white px-3 py-1 rounded-full text-xs font-medium">Non déployé</span>
+            <span class="bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-medium">Code sur demande</span>
+          </div>
+          <p class="text-sm text-gray-500 italic">Projet personnel – démo disponible sur demande.</p>
+        </div>
+      </div>
+
+      <div class="animate-fade-in">
+        <span class="text-sm font-semibold tracking-wider text-primary uppercase">Data + Développement</span>
+        <h3 class="text-3xl font-bold mt-2 mb-4">Automatisation Financière</h3>
+        <p class="text-gray-600 mb-6">Pensée pour les TPE/PME, cette solution permet de gagner du temps d’analyse et d'éviter les erreurs de saisie manuelle.</p>
+        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+          <h4 class="font-bold mb-2">Impact utilisateur</h4>
+          <p class="text-gray-600 text-sm">Jusqu’à 80 % de gain de temps mensuel observé sur l’analyse comptable dans les tests utilisateurs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projet 2 - Numerisk : Gestion des Tickets -->
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+      <div class="order-1 md:order-2 project-card bg-white rounded-2xl overflow-hidden shadow-lg">
+        <div class="relative h-80 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1470&q=80" 
+               alt="Système de gestion des tickets" 
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute bottom-4 left-4 flex flex-wrap gap-2">
+            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">Golang</span>
+            <span class="bg-gray-600 text-white px-3 py-1 rounded-full text-xs font-medium">SQLite</span>
+            <span class="bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-2xl font-bold mb-3">Numerisk — Gestion de Tickets</h3>
+          <p class="text-gray-600 mb-4">
+            Application web pour la gestion des demandes de dépannage technique, avec rôles différenciés, suivi des interventions et reporting.
+          </p>
+          <ul class="text-sm text-gray-600 list-disc list-inside mb-4">
+            <li>Création et suivi des tickets avec priorités et pièces jointes</li>
+            <li>Interface personnalisée (Admin, Technicien, Client)</li>
+            <li>Dashboards analytiques avec KPI (tickets résolus, délais moyens...)</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="bg-gray-400 text-white px-3 py-1 rounded-full text-xs font-medium">En développement</span>
+            <span class="bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-medium">Code sur demande</span>
+          </div>
+          <p class="text-sm text-gray-500 italic">Projet professionnel – démo interne disponible sur demande.</p>
+        </div>
+      </div>
+
+      <div class="order-2 md:order-1 animate-fade-in">
+        <span class="text-sm font-semibold tracking-wider text-primary uppercase">Outil d'entreprise</span>
+        <h3 class="text-3xl font-bold mt-2 mb-4">Helpdesk Moderne</h3>
+        <p class="text-gray-600 mb-6">Développé pour améliorer la gestion des pannes techniques en entreprise, ce projet offre une vue centralisée et structurée des demandes.</p>
+        <div class="grid grid-cols-2 gap-4 mb-8">
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h4 class="font-bold mb-1">Multi-rôles</h4>
+            <p class="text-gray-600 text-sm">Admin, Technicien, Utilisateur</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <h4 class="font-bold mb-1">Analytique</h4>
+            <p class="text-gray-600 text-sm">Tableaux de bord et indicateurs clés</p>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <div class="bg-primary/10 p-3 rounded-full text-primary mr-4">
+            <i class="fas fa-tools"></i>
+          </div>
+          <p class="text-gray-600"><span class="font-bold">Objectif :</span> digitaliser et structurer la gestion du support technique.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projet 3 - Marketplace Immobilier -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg">
+        <div class="relative h-80 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1470&q=80" 
+               alt="Marketplace immobilier" 
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute bottom-4 left-4 flex flex-wrap gap-2">
+            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">Golang</span>
+            <span class="bg-gray-600 text-white px-3 py-1 rounded-full text-xs font-medium">SQLite</span>
+            <span class="bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-2xl font-bold mb-3">Marketplace Immobilier Abidjan</h3>
+          <p class="text-gray-600 mb-4">
+            Plateforme d’annonces immobilières avec tableau de bord utilisateurs, messagerie intégrée, filtrage dynamique et interface responsive.
+          </p>
+          <ul class="text-sm text-gray-600 list-disc list-inside mb-4">
+            <li>Backend complet en Go + base SQLite</li>
+            <li>Frontend responsive sans framework JS</li>
+            <li>Gestion multi-profils (admin, proprio, agent, locataire)</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="bg-gray-400 text-white px-3 py-1 rounded-full text-xs font-medium">En développement</span>
+            <span class="bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-medium">Code sur demande</span>
+          </div>
+          <p class="text-sm text-gray-500 italic">Projet personnel – testé localement, non encore en ligne.</p>
+        </div>
+      </div>
+
+      <div class="animate-fade-in">
+        <span class="text-sm font-semibold tracking-wider text-primary uppercase">Web App</span>
+        <h3 class="text-3xl font-bold mt-2 mb-4">Digitalisation immobilière</h3>
+        <p class="text-gray-600 mb-6">Ce projet vise à moderniser l’intermédiation immobilière à Abidjan à travers une plateforme intuitive et accessible.</p>
+        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+          <h4 class="font-bold mb-2">Objectif</h4>
+          <p class="text-gray-600 text-sm">Faciliter la mise en relation directe entre propriétaires, agents et locataires.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Section Expertise Technique -->
+  <section id="expertise" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-sm font-semibold tracking-wider text-primary uppercase">Compétences</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Mon Expertise Technique</h2>
+        <p class="max-w-2xl mx-auto text-gray-600 mt-4">Un stack technique varié pour répondre à des besoins diversifiés</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Frontend -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-primary/30 transition-all">
+          <div class="text-primary text-4xl mb-6">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Frontend</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+              <span>JavaScript (ES6+)</span>
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+              <span>HTML5 / CSS3 (Tailwind)</span>
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+              <span>Chart.js / Data Viz</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Backend -->
+<div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-primary/30 transition-all">
+  <div class="text-primary text-4xl mb-6">
+    <i class="fas fa-server"></i>
+  </div>
+  <h3 class="text-xl font-bold mb-4">Développement Backend</h3>
+  <ul class="space-y-3">
+    <li class="flex items-center">
+      <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+      <span>Golang (Gin, GORM)</span>
+    </li>
+    <li class="flex items-center">
+      <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+      <span>Python (Flask)</span>
+    </li>
+    <li class="flex items-center">
+      <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+      <span>API REST / Auth / Sécurité</span>
+    </li>
+  </ul>
+</div>
+
+<!-- Data & BI -->
+<div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-primary/30 transition-all">
+  <div class="text-primary text-4xl mb-6">
+    <i class="fas fa-chart-bar"></i>
+  </div>
+  <h3 class="text-xl font-bold mb-4">Analyse de Données</h3>
+  <ul class="space-y-3">
+    <li class="flex items-center">
+      <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+      <span>Python (Pandas, NumPy)</span>
+    </li>
+    <li class="flex items-center">
+      <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+      <span>SQL, Power Query, Excel</span>
+    </li>
+    <li class="flex items-center">
+      <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+      <span>Power BI (DAX, Dashboard)</span>
+    </li>
+  </ul>
+</div>
+
+        
+        <!-- Outils -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-primary/30 transition-all">
+          <div class="text-primary text-4xl mb-6">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Outils & Méthodes</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+              <span>Git / CI-CD</span>
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+              <span>Docker / Kubernetes</span>
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+              <span>Power BI / Excel Avancé</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Langues -->
+      <div class="mt-16 bg-gradient-to-r from-primary to-secondary p-0.5 rounded-xl max-w-2xl mx-auto">
+        <div class="bg-white rounded-xl p-8">
+          <h3 class="text-xl font-bold mb-6 text-center">Langues</h3>
+          <div class="grid grid-cols-2 gap-6">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Français</span>
+                <span class="text-gray-600">Natif</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Anglais</span>
+                <span class="text-gray-600">B2 Technique</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-secondary h-2 rounded-full" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact Premium -->
+  <section id="contact" class="py-20 bg-gray-100/50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-sm font-semibold tracking-wider text-primary uppercase">Collaboration</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Travaillons Ensemble</h2>
+        <p class="max-w-2xl mx-auto text-gray-600 mt-4">Disponible pour des missions freelance ou des opportunités en CDI</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-fade-in">
+          <h3 class="text-2xl font-bold mb-6">Envoyez-moi un message</h3>
+          
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+              <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+            </div>
+            
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
+              <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                <option value="">Sélectionnez une option</option>
+                <option value="freelance">Mission Freelance</option>
+                <option value="emploi">Opportunité d'emploi</option>
+                <option value="projet">Discussion de projet</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"></textarea>
+            </div>
+            
+            <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center">
+              <span>Envoyer le message</span>
+              <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </form>
+        </div>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+          <h3 class="text-2xl font-bold mb-6">Coordonnées</h3>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg text-primary">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold">Email</h4>
+                <a href="mailto:dossoadonias@gmail.com" class="text-gray-600 hover:text-primary transition-colors">dossoadonias@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg text-primary">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold">Téléphone</h4>
+                <a href="tel:+2250555374445" class="text-gray-600 hover:text-primary transition-colors">+225 05 55 37 4445</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg text-primary">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="font-bold">Localisation</h4>
+                <p class="text-gray-600">Abidjan, Côte d'Ivoire</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8 pt-8 border-t border-gray-200">
+            <h4 class="font-bold mb-4">Réseaux Professionnels</h4>
+            <div class="flex space-x-4">
+              <a href="https://www.linkedin.com/in/adonia-dosso" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/donydosso" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-colors">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Premium -->
+  <footer class="bg-dark text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">AD</h3>
+          <p class="text-gray-400">Développeuse Full Stack & Data Analyste spécialisée dans la création de solutions techniques performantes.</p>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="#accueil" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
+            <li><a href="#projets" class="text-gray-400 hover:text-white transition-colors">Projets</a></li>
+            <li><a href="#expertise" class="text-gray-400 hover:text-white transition-colors">Expertise</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Mentions légales</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <p>© 2024 Adonia Alisha Fanta DOSSO. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JS -->
+  <script src="main.js"></script>
+</body>
+</html>
