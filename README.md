@@ -40,11 +40,10 @@ Le projet est organisé de manière claire pour faciliter la maintenance et l'é
 
 ```
 .
-├── index.html          # Page principale du portfolio
-├── README.md           # Ce fichier
-└── assets/             # (Optionnel) Dossier pour les images, si séparées du code
-    └── images/
-        └── ...
+├── index.html
+├── main.js
+├── styles.css
+├── README.md
 ```
 
 *Note : Si vous avez séparé le JavaScript dans un fichier `script.js` ou le CSS dans un fichier `style.css`, la structure pourrait inclure des dossiers `js/` et `css/`.*
