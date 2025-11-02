@@ -346,7 +346,87 @@
           </div>
         `,
         image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1471&q=80"
-      }
+      },
+      7: {
+  title: "DEX - Data Exchange Platform",
+  description: "Plateforme centralisée de saisie et d'analyse de données pour NSIA Vie avec reporting temps réel et gestion multi-pôles.",
+  details: `
+    <h3 class="text-2xl font-bold mb-4">Détails du projet</h3>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h4 class="font-bold mb-2">Architecture & Technologies</h4>
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li><strong>Backend:</strong> Go (Golang) avec architecture RESTful</li>
+          <li><strong>Base de données:</strong> MySQL avec schéma relationnel</li>
+          <li><strong>Frontend:</strong> Alpine.js + Tailwind CSS</li>
+          <li><strong>Authentification:</strong> JWT avec cookies HttpOnly</li>
+          <li><strong>Visualisation:</strong> Chart.js pour les dashboards</li>
+        </ul>
+        
+        <h4 class="font-bold mb-2">Fonctionnalités principales</h4>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Saisie centralisée pour 8 pôles opérationnels</li>
+          <li>Dashboards temps réel avec filtres avancés</li>
+          <li>Gestion des utilisateurs et contrôle d'accès RBAC</li>
+          <li>Système de double saisie pour les stocks</li>
+          <li>Validation métier côté serveur</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-2">Challenges techniques relevés</h4>
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>Architecture sécurisée avec middleware d'authentification</li>
+          <li>API générique pour CRUD dynamique avec whitelist</li>
+          <li>Optimisation des performances des requêtes d'agrégation</li>
+          <li>Gestion d'état côté client avec Alpine.js</li>
+          <li>Déploiement avec Nginx reverse proxy</li>
+        </ul>
+        
+        <h4 class="font-bold mb-2">Sécurité implémentée</h4>
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>Hachage bcrypt pour les mots de passe</li>
+          <li>JWT stockés en cookies HttpOnly</li>
+          <li>Validation côté serveur de toutes les données</li>
+          <li>Protection CSRF avec SameSite Lax</li>
+          <li>Contrôle d'accès basé sur les rôles</li>
+        </ul>
+        
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h4 class="font-bold mb-2">Statut</h4>
+          <p class="mb-2">Projet professionnel – En production chez NSIA Vie</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium">En production</span>
+            <span class="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">Code propriétaire</span>
+            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-medium">Architecture complète</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+      <h4 class="font-bold mb-3 text-lg">Impact métier</h4>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div>
+          <div class="text-2xl font-bold text-primary">8</div>
+          <div class="text-sm text-gray-600">Pôles centralisés</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-primary">13</div>
+          <div class="text-sm text-gray-600">Tables optimisées</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-primary">Temps réel</div>
+          <div class="text-sm text-gray-600">Reporting</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-primary">100%</div>
+          <div class="text-sm text-gray-600">Validation données</div>
+        </div>
+      </div>
+    </div>
+  `,
+  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1470&q=80"
+}
     };
 
     // Gestion des clics sur les boutons "Voir plus" des projets
